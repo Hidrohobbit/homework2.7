@@ -1,12 +1,9 @@
 ﻿#include <iostream>
-#define MODE 1
+#define MODE 0
 
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	int number_1 = 0;
-	int number_2 = 0;
-
 #ifndef MODE
 #error MODE definition required
 #endif
@@ -14,6 +11,8 @@ int main()
 	std::cout << "Работаю в режиме тренировки";
 #elif MODE == 1
 #define ADD(num_1, num_2) ( (num_1+num_2) )
+	int number_1 = 0;
+	int number_2 = 0;
 	std::cout << "Работаю в боевом режиме\n";
 	std::cout << "Введите число 1: ";
 	std::cin >> number_1;
